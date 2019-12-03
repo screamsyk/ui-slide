@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 50px 0;
+    background-color: #fff;
+    font-size: 14px;
+    color: #555;
+    -webkit-font-smoothing: antialiased;
+    /*字体抗锯齿*/
+}
+
+.slide {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.content {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content-i {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    height: 400px;
+    width: 100%;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.content-i-right {
+    right: -50%;
+}
+
+.content-i .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+}
+
+.content-i .caption {
+    position: absolute;
+    top: 100px;
+    right: 60%;
+}
+
+.caption h2 {
+    line-height: 40px;
+    color: #b5b5b5;
+    text-align: right;
+    margin-right: 40px;
+    transition: all .8s .5s;
+}
+
+.caption h3 {
+    font-size: 30px;
+    color: #555;
+    text-align: right;
+    font-weight: normal;
+    margin-right: -40px;
+    transition: all .8s .5s;
+}
+
+.content-i-active {
+    opacity: 1;
+    right: 0;
+}
+
+.content-i-active .caption h2,
+.content-i-active .caption h3 {
+    margin-right: 0;
+}
+
+.ctrl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    line-height: 15px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.ctrl .ctrl-i {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 15px;
+    background-color: #666;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.ctrl .ctrl-i:hover {
+    background-color: #f0f0f0;
+}
+
+.ctrl-i img {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all .2s ease-in;
+}
+
+.ctrl .ctrl-i:hover img {
+    bottom: 15px;
+    opacity: 1;
+    -webkit-box-reflect: below 0px -webkit-linear-gradient(transparent, transparent 50%, rgba(255, 255, 255, 0.3));
+    /*倒影：below向下，0px无间距，*/
+}
+
+.ctrl .ctrl-i-active {
+    background-color: #f0f0f0;
+}
+
+.ctrl .ctrl-i-active:hover {
+    background-color: #f0f0f0;
+}
+
+.ctrl .ctrl-i-active:hover img {
+    opacity: 0;
+}
