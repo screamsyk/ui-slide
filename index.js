@@ -10,10 +10,10 @@ var slide = (function () {
         { imgName: '6', h2: 'hello', h3: 'Hello World!' },
         { imgName: '7', h2: 'hello', h3: 'Hello World!' }
     ]
-    var dom_content = document.getElementById('tpl_content');//幻灯片内容
-    var dom_ctrl = document.getElementById('tpl_ctrl');//幻灯片控制
-    var tpl_content = dom_content.innerHTML;
-    var tpl_ctrl = dom_ctrl.innerHTML;
+    var dom_content = document.getElementById('div_content');
+    var dom_ctrl = document.getElementById('div_ctrl');
+    var tpl_content = document.getElementById('tpl_content').innerHTML; // 幻灯片内容
+    var tpl_ctrl = document.getElementById('tpl_ctrl').innerHTML; // 幻灯片控制
 
     // (2)初始化
     var init = function () {

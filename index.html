@@ -15,23 +15,27 @@
     <div class="slide">
 
         <!--content: 主体内容-->
-        <div class="content" id="tpl_content">
-            <div class="content-i {{css}}">
-                <div class="img">
-                    <img src="img/{{imgName}}.jpg">
+        <div class="content" id="div_content">
+            <template id="tpl_content">
+                <div class="content-i {{css}}">
+                    <div class="img">
+                        <img src="img/{{imgName}}.jpg">
+                    </div>
+                    <div class="caption">
+                        <h2>{{h2}}</h2>
+                        <h3>{{h3}}</h3>
+                    </div>
                 </div>
-                <div class="caption">
-                    <h2>{{h2}}</h2>
-                    <h3>{{h3}}</h3>
-                </div>
-            </div>
+            </template>
         </div>
 
         <!--ctrl: 幻灯片控制-->
-        <div class="ctrl" id="tpl_ctrl">
-            <div class="ctrl-i" onclick="{{onclick}}">
-                <img src="img/{{imgName}}.jpg">
-            </div>
+        <div class="ctrl" id="div_ctrl">
+            <template id="tpl_ctrl">
+                <div class="ctrl-i" onclick="{{onclick}}">
+                    <img src="img/{{imgName}}.jpg">
+                </div>
+            </template>
         </div>
     </div>
     <script src="index.js"></script>
